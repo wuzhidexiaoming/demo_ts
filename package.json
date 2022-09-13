@@ -1,0 +1,46 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "start": "gulp --require @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "dev": "pnpm run stub",
+    "stub": "unbuild --stub",
+    "generatedts": "pnpm run start generateTypesDefinitions"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/lodash-es": "^4.17.6",
+    "@types/web-bluetooth": "^0.0.15",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "@vue/shared": "^3.2.39",
+    "@vueuse/core": "^9.2.0",
+    "chalk": "^5.0.1",
+    "consola": "^2.15.3",
+    "esbuild": "^0.15.5",
+    "fs-extra": "^10.1.0",
+    "gulp": "^4.0.2",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.2",
+    "rollup": "^2.78.1",
+    "rollup-plugin-esbuild": "^4.10.1",
+    "type-fest": "^2.19.0",
+    "typescript": "4.7.4",
+    "vue": "^3.2.39"
+  },
+  "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.3.3",
+    "@pnpm/types": "^8.5.0",
+    "@types/node": "^18.7.17",
+    "@vue/runtime-dom": "^3.2.39",
+    "fast-glob": "^3.2.12",
+    "ts-morph": "14.0.0",
+    "unbuild": "^0.8.9"
+  }
+}
